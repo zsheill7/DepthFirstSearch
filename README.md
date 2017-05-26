@@ -6,7 +6,7 @@ In this tutoral, we will be learning about Depth-First Search.  Depth-first sear
 Imagine you're the man in this maze.  
 <br>
 
-<img src="images/man in maze.jpg" alt="maze"></img>
+<img src="images/man in maze.jpg" alt="maze">
 <br>
 <br>
 <p>You wouldn't search all the paths at once, only traveling a little bit along each one before turning back, like you would in Breadth-First Search. That would be silly.  You would probably travel all the way along one path and then travel back to try the next path.  </p>
