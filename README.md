@@ -9,7 +9,7 @@ Imagine you're the man in this maze.
 <img src="images/man in maze.jpg" alt="maze"></img>
 <br>
 <br>
-<p>You wouldn't search all the paths at once, only traveling a little bit along each one before turning back, like you would in Breadth-First Search. That would be silly.  You would probably travel all the way along one path and then travel back.  </p>
+<p>You wouldn't search all the paths at once, only traveling a little bit along each one before turning back, like you would in Breadth-First Search. That would be silly.  You would probably travel all the way along one path and then travel back to try the next path.  </p>
 
 
 <p>DFS starts at the tree root, or a node of the graph, and searches all the way down each path to find all the nodes along that path before backtracking  to start along the next path.  This is a bit more efficient than Breadth-First Search, which searches level-by-level. One common use of it is, you guessed it, in mazes. </p>
@@ -17,9 +17,10 @@ Imagine you're the man in this maze.
 <p>Below is the sequence of nodes found using Depth-First search.  The algorithm travels all the way down one path before turning back.</p>  
 
 
-<img src="images/tree.png" alt="tree"></img>
-<img src="images/twoh.png" alt="tree"></img>
-<img src="images/threeh.png" alt="tree"></img>
+
+<img src="images/tree.png" alt="tree" height="350"></img>
+<img src="images/twoh.png" alt="tree" height="350"></img>
+<img src="images/threeh.png" alt="tree" height="350"></img>
 
 
 
