@@ -1,9 +1,11 @@
 <h1> Depth First Search </h1>
 
-In this tutoral, we will be learning about Depth-First Search.  Depth-first search is an algorithm for searching tree or graph data structures.  It starts at the tree root, or a node of the graph, and searches all the way down each path to find all the nodes along that path before backtracking 
-to start along the next path.  This is a bit more efficient than Breadth-First Search, which searches level-by-level.  One easy-to-conceptualize use of it is in mazes.  DFS can be used to efficiently find routes out of a maze. 
+In this tutoral, we will be learning about Depth-First Search.  Depth-first search is an algorithm for searching tree or graph data structures.  It starts at the tree root, or a node of the graph, and searches all the way down each path to find all the nodes along that path before backtracking  to start along the next path.  This is a bit more efficient than Breadth-First Search, which searches level-by-level.  One easy-to-conceptualize use of it is in mazes.  DFS can be used to efficiently find routes out of a maze. 
 
 <img src="images/tree.png" alt="tree"></img>
+<img src="images/twoh.png" alt="tree"></img>
+<img src="images/threeh.png" alt="tree"></img>
+
 
 For example, in the above tree, the algorithm would first find the A in the first row, then look for the B, F, and G in the next row.  Next, it would stop searching along the F branch, because there would be no more nearby, or "neighbor" nodes.  Then, the algorithm would continue searching along the other two branches, finding the "C", "D", and "H".
 
