@@ -18,9 +18,9 @@ Imagine you're the man in this maze.
 
 
 
-<img src="images/tree.png" alt="tree" width="600"></img>
-<img src="images/twoh.png" alt="tree" width="600"></img>
-<img src="images/threeh.png" alt="tree" width="600"></img>
+<img src="images/tree.png" alt="tree" width="600">
+<img src="images/twoh.png" alt="tree" width="600">
+<img src="images/threeh.png" alt="tree" width="600">
 
 
 
@@ -169,5 +169,9 @@ Output window:
 1 4 5 2 3 
 
 
-Success!  Our Depth-First Search Algorithm found all the nodes!
+<p>Success!  Our Depth-First Search Algorithm found all the nodes!</p>
+
+<img src="images/thumbsup.png" alt="thumbs">
+
+
 
