@@ -171,7 +171,7 @@ Output window:
 
 <p>Success!  Our Depth-First Search Algorithm found all the nodes!</p>
 
-<img src="images/thumbsup.png" alt="thumbs">
+<img src="images/thumbsup.png" width="400" alt="thumbs">
 
 
 
