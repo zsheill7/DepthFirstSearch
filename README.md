@@ -89,13 +89,26 @@ private Stack<Vertex> stack;
 	}
 ```
 
-Next, we're going to implement the algorithm that travels along each path.  
+<p>Next, we're going to implement the algorithm that travels along each path.  </p>
 
-/* 2 */ For each vertex, we're going to travel down each path and check if the nodes in that path have been visited.  If not, we're going to add it to our stack of vertices we need to visit.  
+<p>For each vertex, we're going to travel down each path and check if the nodes in that path have been visited.  If not, we're going to add it to our stack of vertices we need to visit.  </p>
 
-We will do this until all the vertices have been visited (/* 1 */).
+<p>We will do this until all the vertices have been visited.</p>
 
-The following code is the code for traveling along a single path.  While the stack isn't empty, the 
+<p>Our vertexList is the list of all vertices we have currently found.  For each vertex, we call "dfsWithStack" to travel along the path of that vertex. </p>
+
+```
+public void dfs(List<Vertex> vertexList) {
+		
+		for (Vertex v : vertexList) {
+			if (!v.isVisited()) {
+				v.setVisited(true);
+				dfsWithStack(v);
+			}
+		}
+	}
+```
+<p>The following code is the code for traveling along a single path.  While the stack isn't empty, we "pop" the top node from the stack and travel down that path.  After that, we set all those nodes to "visited" and backtrack to start along the next path.</p> 
 
 ```
 private void dfsWithStack(Vertex rootVertex) {
@@ -116,9 +129,11 @@ private void dfsWithStack(Vertex rootVertex) {
 	}
 ```
 
-Next, we're going to test our algorithm.  Open App.java and add the following code:
+
+
+<p>Next, we're going to test our algorithm.  Open App.java and add the following code:</p>
 ```
-BFS bfs = new BFS();
+DFS dfs = new DFS();
 		
 		Vertex vertex1 = new Vertex(1);
 		Vertex vertex2 = new Vertex(2);
@@ -133,19 +148,20 @@ BFS bfs = new BFS();
 ```
 The first line initializes the Breadth-First Search Algorithm and the subsequent lines create a data tree with the root node vertex1.
 
-Next, add the following line.  This will run your breadth-first search algorithm.
+The following line gives your Depth First Search a list to store the vertices it has currently found. 
 ```
-bfs.bfs(vertex1);
+List<Vertex> list = new ArrayList<>();
+```
+
+Next, add the following line.  This will run your depth-first search algorithm.
+```
+dfs.dfs(list);
 ```
 
 
 Output window:
-1 
-2 
-4 
-3 
-5 
+1 4 5 2 3 
 
 
-Success!  Our Breadth-First Search Algorithm found all the nodes!
+Success!  Our Depth-First Search Algorithm found all the nodes!
 
