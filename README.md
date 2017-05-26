@@ -146,14 +146,19 @@ DFS dfs = new DFS();
 		vertex4.addNeighborVertex(vertex5);
 		vertex2.addNeighborVertex(vertex3);
 ```
-The first line initializes the Breadth-First Search Algorithm and the subsequent lines create a data tree with the root node vertex1.
 
-The following line gives your Depth First Search a list to store the vertices it has currently found. 
+<p>The first line initializes the Breadth-First Search Algorithm and the subsequent lines create a data tree with the root node vertex1.</p>
+
+<p>The following line gives your Depth First Search a list to store the vertices it has currently found. </p>
+
 ```
 List<Vertex> list = new ArrayList<>();
 ```
 
+
 Next, add the following line.  This will run your depth-first search algorithm.
+
+
 ```
 dfs.dfs(list);
 ```
