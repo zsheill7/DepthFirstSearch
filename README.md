@@ -132,6 +132,7 @@ private void dfsWithStack(Vertex rootVertex) {
 
 
 <p>Next, we're going to test our algorithm.  Open App.java and add the following code:</p>
+
 ```
 DFS dfs = new DFS();
 		
