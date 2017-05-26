@@ -1,18 +1,28 @@
 <h1> Depth First Search </h1>
 
-In this tutoral, we will be learning about Depth-First Search.  Depth-first search is an algorithm for searching tree or graph data structures.  It starts at the tree root, or a node of the graph, and searches all the way down each path to find all the nodes along that path before backtracking  to start along the next path.  This is a bit more efficient than Breadth-First Search, which searches level-by-level.  One easy-to-conceptualize use of it is in mazes.  DFS can be used to efficiently find routes out of a maze. 
+In this tutoral, we will be learning about Depth-First Search.  Depth-first search is an algorithm for searching tree or graph data structures.   
+
+<br>
+Imagine you're the man in this maze.  
+
+<img src="images/man in maze.jpg" alt="maze"></img>
+<br>
+You wouldn't search all the paths at once, only traveling a little bit along each one before turning back, like you would in Breadth-First Search.  You would probably travel all the way along one path and then travel back, like in Depth-First Search.  
+DFS starts at the tree root, or a node of the graph, and searches all the way down each path to find all the nodes along that path before backtracking  to start along the next path.  This is a bit more efficient than Breadth-First Search, which searches level-by-level. One common use of it is, you guessed it, in mazes. 
+
+Below is the sequence of nodes found using Depth-First search.  The algorithm travels all the way down one path before turning back.  
+
 
 <img src="images/tree.png" alt="tree"></img>
 <img src="images/twoh.png" alt="tree"></img>
 <img src="images/threeh.png" alt="tree"></img>
 
 
-For example, in the above tree, the algorithm would first find the A in the first row, then look for the B, F, and G in the next row.  Next, it would stop searching along the F branch, because there would be no more nearby, or "neighbor" nodes.  Then, the algorithm would continue searching along the other two branches, finding the "C", "D", and "H".
 
 Next, create three classes.  
-1. Vertex.java - This will create the vertices, or nodes, of your data tree which will be used to test your Breadth First Search algorithm. 
-2. BFS.java - This is where you will implement your Breadth-First Search algorithm.
-3. App.java - This is where you will call your Breadth-First Search algorithm and use it to find all nodes in your data tree.
+1. Vertex.java - This will create the vertices, or nodes, of your data tree which will be used to test your Depth First Search algorithm. 
+2. DFS.java - This is where you will implement your Depth-First Search algorithm.
+3. App.java - This is where you will call your Depth-First Search algorithm and use it to find all nodes in your data tree.
 
 In Vertex.java:
 Initialize your data variable and a boolean visited to indicate if you have visited the current node or not.  Then, create a neighborList to keep track of the current node's neighbor nodes.  
@@ -62,36 +72,43 @@ public int getData() {
 		return ""+this.data;
 	}
 ```
-Next, go to BFS.java.
+Next, go to DFS.java.
 
-First, initialize your queue.  This will be the list of nodes you have to visit.  Your algorithm will add and delete values from this queue. 
+First, initialize your stack.  This will be the stack of nodes you have to visit.  Your algorithm will add and delete values from this stack as it travels along each path. 
 
 ```
-Queue<Vertex> queue = new LinkedList<>();
+private Stack<Vertex> stack;
+	
+	public DFS() {
+		this.stack = new Stack<>();
+	}
+```
+
+Next, we're going to implement the algorithm that travels along each path.  
+
+/* 2 */ For each vertex, we're going to travel down each path and check if the nodes in that path have been visited.  If not, we're going to add it to our stack of vertices we need to visit.  
+
+We will do this until all the vertices have been visited (/* 1 */).
+
+The following code is the code for traveling along a single path.  While the stack isn't empty, the 
+
+```
+private void dfsWithStack(Vertex rootVertex) {
+		this.stack.add(rootVertex);
+		rootVertex.setVisited(true);
 		
-		root.setVisited(true);
-		queue.add(root);
-```
-
-Next, we're going to implement the algorithm.  
-
-/* 2 */ For each vertex, we're going to get the list of neighbors and check if that neighbor has been visited.  If not, we're going to add it to our queue of vertices we need to visit.  
-
-We will do this until the queue of vertices we need to visit is empty (/* 1 */).
-
-```
-/* 1 */ while (!queue.isEmpty()) {
-			Vertex actualVertex = queue.remove();
-			System.out.println(actualVertex+" ");
+		while (!stack.isEmpty()) {
+			Vertex actualVertex = this.stack.pop();
+			System.out.print(actualVertex + " " );
 			
-			/* 2 */ for (Vertex v : actualVertex.getNeighborList()) {
+			for (Vertex v : actualVertex.getNeighborList()) {
 				if (!v.isVisited()) {
 					v.setVisited(true);
-					queue.add(v);
+					this.stack.push(v);
 				}
 			}
-			
 		}
+	}
 ```
 
 Next, we're going to test our algorithm.  Open App.java and add the following code:
