@@ -18,9 +18,9 @@ Imagine you're the man in this maze.
 
 
 
-<img src="images/tree.png" alt="tree" height="350"></img>
-<img src="images/twoh.png" alt="tree" height="350"></img>
-<img src="images/threeh.png" alt="tree" height="350"></img>
+<img src="images/tree.png" alt="tree" width="600"></img>
+<img src="images/twoh.png" alt="tree" width="600"></img>
+<img src="images/threeh.png" alt="tree" width="600"></img>
 
 
 
