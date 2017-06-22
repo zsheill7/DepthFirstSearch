@@ -1,6 +1,6 @@
 <h1> Depth First Search </h1>
 
-In this tutoral, we will be learning about Depth-First Search.  Depth-first search is an algorithm for searching tree or graph data structures.   
+In this tutoral, we will be learning about Depth-First Search.  Depth-first search is an algorithm for searching tree or graph data structures.   If you would like to learn about Breadth-first Search, please click on <a href="https://zsheill7.github.io/BreadthFirstSearch/">this link</a>
 
 <br>
 Imagine you're the man in this maze.  
